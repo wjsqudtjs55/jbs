@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--<link rel="stylesheet" href="css/reset.css">-->
+	<style>
+        input.skyblue::-webkit-input-placeholder {color: skyblue;}
+        .a1 {vertical-align: middle;}
+        fieldset {border: none;}
+    </style>
+</head>
+<body>
+<h1>input요소</h1>
+<form action="join.php" method="post">
+    <fieldset>
+        <legend>회원가입</legend>
+        <p>아이디 : 
+            <input type="text" size="12" maxlength="5" autofocus placeholder="아이디" class="skyblue">
+        </p>
+        <p>
+            <label for="as">비밀번호 : </label>
+            <input type="password" size="12" id="as">
+        </p>
+        <p> 메일수신여부 : 
+            <input type="radio" value="y" name="receive">예
+            <input type="radio" value="n" name="receive">아니오
+        </p>
+        <p>관심분야 : 
+            <input type="checkbox" value="HTML" name="chk1">HTML
+            <input type="checkbox" value="CSS" name="chk1">CSS
+            <input type="checkbox" value="JQUERY" name="chk1">JQUERY
+        </p>
+        <p>E-mail : <input type="email" name="email"></p>
+        <p>TEL : 
+            <input type="tel" pattern="[0-9]{11}" title="하이픈(-)을 넣지 말고 11자리의 전화번호를 입력해주세요" required name="tel">
+        </p>
+        <p>Date : 
+            <input type="date">
+        </p>
+        <p>
+            <input type="submit" value="전송">
+            <input type="reset" value="취소">
+            <input type="button" value="확인">
+            <input type="image" src="image/search.gif" class="a1" alt="검색">
+        </p>
+        <p>파일올리기 : 
+            <input type="file">
+        </p>
+    </fieldset>
+</form>
+<hr>
+<form action="board.php" method="post">
+    <fieldset>
+        <legend>여러 줄 글상자와 목록상자</legend>
+        <p>답글<br>
+        <textarea cols="30" rows="3" name="reply"></textarea>
+    </p>
+        <p>과목선택
+        <select>
+            <option value="html5">html5</option>
+            <option value="css">css</option>
+            <option value="javascript">javascript</option>
+            <option value="jquery">jquery</option>
+        </select>
+        </p>
+    </fieldset>
+</form>
+</body>
+</html>
